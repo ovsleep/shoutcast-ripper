@@ -9,5 +9,12 @@ const path = process.argv[3];
 const fileName = process.argv[4];
 const duration = process.argv[5]*60000 + 5000; //5000 for startup time
 
-const icy = exec('icy-rip '+ url + ' ' + path + ' ' + fileName + ' -d', { timeout: duration });
+const icy = exec('icy-rip '+ url + ' ' + path + ' ' + fileName + ' -d', { timeout: duration }, (error, stdout, stderr) => {
+  if (error) {
+    console.error(`exec error: ${error}`);
+    return;
+  }
+  console.log(`stdout: ${stdout}`);
+  console.log(`stderr: ${stderr}`);
+});
 
