@@ -1,1 +1,0 @@
-icy-rip http://radio2.oceanofm.com:8010/  E:\Proyectos\Personal\shoutcast\recordings2
