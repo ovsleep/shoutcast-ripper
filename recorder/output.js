@@ -2,7 +2,7 @@ var fs = require('fs');
 var path = require('path');
 var sanitize = require('sanitize-filename');
 var childProcess = require('child_process');
-var log = require('./log');
+var log = require('../log');
 
 function fixName(name) {
     //log.log(name);

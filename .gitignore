@@ -4,3 +4,5 @@
 /db.bat
 /icy.bat
 /recordings
+/recorder/node_modules
+/webcast/node_modules
