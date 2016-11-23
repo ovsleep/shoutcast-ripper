@@ -1,0 +1,22 @@
+<div class="card">
+    <div class="card-block">
+        <span class="tag tag-pill tag-success pull-right">{{task.newRecordings()}}</span>
+        <h4 class="card-title">{{task.name}} </h4>
+        <p class="card-text">{{task.url}}</p>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><label>Days: </label> <b>[ {{task.days | days}} ]</b></li>
+            <li class="list-group-item"><label>Starting At: </label> <b>{{task.startHour | timestamp}} for {{task.duration}} minutes</b></li>
+        </ul>
+        <table class="recordings-list">
+            <tr *ngFor="let recording of task.recordings" class="recording-line">
+                <td class="align-middle">{{recording.timestamp | date}} - </td>
+                <td>
+                    <audio controls>
+                        <source src="http://localhost:3000/api/recordings/{{recording._id}}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

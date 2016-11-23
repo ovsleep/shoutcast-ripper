@@ -1,0 +1,14 @@
+<!--<ul class="tasks">
+<li *ngFor="let task of tasks" 
+    (click)="onSelect(task)"
+    [class.selected]="task === selectedTask">
+    {{task.name}}
+</li>
+</ul>-->
+
+<div class="card-deck">
+
+	<taskCard *ngFor="let task of tasks" [task]="task">
+		
+	</taskCard>
+</div>

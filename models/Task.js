@@ -24,7 +24,8 @@ taskSchema.methods.finishTask = function (recordingFilePath) {
         var recording = new Recording({
             task: this._id,
             timestamp: new Date(),
-            path: recordingFilePath
+            path: recordingFilePath,
+            newRecording: true
         });
 
         var task = this;
