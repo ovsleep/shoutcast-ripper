@@ -15,7 +15,7 @@ var Observable_1 = require('rxjs/Observable');
 var TaskService = (function () {
     function TaskService(http) {
         this.http = http;
-        this.tasksUrl = 'http://localhost:3000/api/tasks'; // URL to web api
+        this.tasksUrl = 'http://192.168.1.17:3000/api/tasks'; // URL to web api
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
     }
     TaskService.prototype.handleError = function (error) {

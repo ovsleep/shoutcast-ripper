@@ -7,7 +7,7 @@ import { Observable }     from 'rxjs/Observable';
 
 @Injectable()
 export class TaskService{
-  private tasksUrl = 'http://localhost:3000/api/tasks';  // URL to web api
+  private tasksUrl = 'http://192.168.1.17:3000/api/tasks';  // URL to web api
   private headers = new Headers({'Content-Type': 'application/json'})
 
   constructor(private http: Http) { }
